@@ -13,7 +13,15 @@ class TblUserProfile extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_user_profile', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('username', 150);
+            $table -> char('nama', 200);
+            $table -> enum('jk', ['L','P']);
+            $table -> text('alamat') -> nullable();
+            $table -> char('hp', 30) -> nullable();
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class TblUserProfile extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_user_profile');
     }
 }

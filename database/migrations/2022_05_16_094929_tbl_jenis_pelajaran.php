@@ -13,7 +13,13 @@ class TblJenisPelajaran extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_jenis_pelajaran', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('kd_pelajaran', 150);
+            $table -> char('nama', 200);
+            $table -> text('keterangan') -> nullable();
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblJenisPelajaran extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_jenis_pelajaran');
     }
 }
