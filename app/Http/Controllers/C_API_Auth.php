@@ -20,6 +20,7 @@ class C_API_Auth extends Controller
             if($cekUser == true){
                 $role = $dUser -> role;
                 $status = "SUCCESS";
+                $request -> session() -> put('username', $request -> username);
             }else{
                 $role = "";
                 $status = "WRONG_PASSWORD";
