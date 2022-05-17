@@ -10,7 +10,7 @@ use App\Http\Controllers\C_Admin_Auth;
 Route::post('/auth/login/proses', [C_API_Auth::class, 'loginproses']);
 
 // Aplication admin
-Route::get('/', [C_Admin_Auth::class, 'loginpage']);
+Route::get('/admin/login', [C_Admin_Auth::class, 'loginpage']);
 
 // Aplication user 
 Route::get('/', [C_Apps_Auth::class, 'landingpage']);
