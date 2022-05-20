@@ -17,6 +17,7 @@ Route::get('/admin/dashboard', [C_Admin_Dashboard::class, 'dashboardpage']);
 Route::get('/admin/dashboard/beranda', [C_Admin_Dashboard::class, 'berandapage']);
 
 Route::get('/admin/mentor', [C_Admin_Mentor::class, 'mentorpage']);
+Route::post('/admin/mentor/add/proses', [C_Admin_Mentor::class, 'prosestambahmentor']);
 
 // Aplication user 
 Route::get('/', [C_Apps_Auth::class, 'landingpage']);
