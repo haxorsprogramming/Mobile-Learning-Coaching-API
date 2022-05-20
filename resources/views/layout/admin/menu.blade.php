@@ -17,7 +17,7 @@
             <div class="dropdown-menu" aria-labelledby="topnav-layout">
                 <a href="javascript:void(0)" onclick="renderPage('admin/mentor', 'Data Mentor')" class="dropdown-item">Data Mentor</a>
                 <a href="javascript:void(0)" onclick="renderPage('admin/murid', 'Data Murid')" class="dropdown-item">Data Murid</a>
-                <a href="javascript:void(0)" class="dropdown-item">Kategori Tahsin</a>
+                <a href="javascript:void(0)" onclick="renderPage('admin/jenis-pelajaran', 'Data Jenis Pelajaran')" class="dropdown-item">Jenis Pelajaran</a>
             </div>
         </li>
        
