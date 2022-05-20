@@ -7,6 +7,7 @@ use App\Http\Controllers\C_Apps_Auth;
 use App\Http\Controllers\C_Admin_Auth;
 use App\Http\Controllers\C_Admin_Dashboard;
 use App\Http\Controllers\C_Admin_Mentor;
+use App\Http\Controllers\C_Admin_Murid;
 
 // API 
 Route::post('/auth/login/proses', [C_API_Auth::class, 'loginproses']);
@@ -19,6 +20,8 @@ Route::get('/admin/dashboard/beranda', [C_Admin_Dashboard::class, 'berandapage']
 Route::get('/admin/mentor', [C_Admin_Mentor::class, 'mentorpage']);
 Route::post('/admin/mentor/add/proses', [C_Admin_Mentor::class, 'prosestambahmentor']);
 Route::post('/admin/mentor/delete/proses', [C_Admin_Mentor::class, 'proseshapusmentor']);
+
+Route::get('/admin/murid', [C_Admin_Murid::class, 'muridpage']);
 
 // Aplication user 
 Route::get('/', [C_Apps_Auth::class, 'landingpage']);
