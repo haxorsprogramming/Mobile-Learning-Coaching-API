@@ -12,7 +12,7 @@
                     <div class="page-title-box">
                         <h4>@{{ judulPage }}</h4>
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">AR Presensi</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Aplikasi Mobile Learning Tahsin</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">@{{ judulPage }}</a></li>
                         </ol>
                     </div>

@@ -10,4 +10,8 @@ class C_Admin_Dashboard extends Controller
     {
         return view('admin.main.dashboard');
     }
+    public function berandapage()
+    {
+        echo "halaman beranda";
+    }
 }

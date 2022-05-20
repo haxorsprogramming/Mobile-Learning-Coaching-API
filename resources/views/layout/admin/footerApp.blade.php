@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                2022 © Aplikasi Analisa Penjualan.
+                2022 © Aplikasi Mobile Learning Tahsin.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-right d-none d-sm-block">
-                    Crafted with <i class="mdi mdi-heart text-danger"></i> by Aditia Darma Nst
+                    Crafted with <i class="mdi mdi-heart text-danger"></i> by Wahidatunnisa Nst
                 </div>
             </div>
         </div>
