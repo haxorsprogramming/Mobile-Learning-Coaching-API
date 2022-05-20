@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class C_Apps_Auth extends Controller
 {
-    public function landingpage()
+    public function loginpage()
     {
-        echo "halaman apps";
+        return view('apps.auth.login');
     }
 }

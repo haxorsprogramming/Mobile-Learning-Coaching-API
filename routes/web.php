@@ -13,6 +13,9 @@ use App\Http\Controllers\C_Admin_Jenis_Pelajaran;
 // ----------------------- API ------------------------------------------- // 
 Route::post('/auth/login/proses', [C_API_Auth::class, 'loginproses']);
 
+// ----------------------- ROOT ------------------------------------------ // 
+Route::get('/', function () { return 'APLIKASI MOBILE LEARNING TAHSIN PADA HAFALAN AL-QUR’AN MENGGUNAKAN METODE COACHING BERBASIS ANDROID'; });
+
 // --------------------- ADMIN ------------------------------------------- //
 # Auth
 Route::get('/admin/login', [C_Admin_Auth::class, 'loginpage']);
@@ -33,4 +36,4 @@ Route::post('/admin/jenis-pelajaran/add/proses', [C_Admin_Jenis_Pelajaran::class
 Route::post('/admin/jenis-pelajaran/delete/proses', [C_Admin_Jenis_Pelajaran::class, 'proseshapusjenispelajaran']);
 
 // ----------------- APPLICATION USER ------------------------------------ //
-Route::get('/', [C_Apps_Auth::class, 'landingpage']);
+Route::get('/apps-mobile', [C_Apps_Auth::class, 'loginpage']);
