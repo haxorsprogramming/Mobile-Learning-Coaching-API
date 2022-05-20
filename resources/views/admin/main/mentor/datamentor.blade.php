@@ -14,15 +14,24 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>NIP</th>
                             <th>Nama</th>
-                            <th>Divisi</th>
+                            <th>Jenis Kelamin</th>
                             <th>Kontak / Alamat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                   
+                    @foreach($dataMentor as $mentor)
+                    <tr>
+                        <td>{{ $loop -> iteration }}</td>
+                        <td>{{ $mentor -> getUserProfile($mentor -> username) -> nama }}</td>
+                        <td>{{ $mentor -> getUserProfile($mentor -> username) -> jk }}</td>
+                        <td>{{ $mentor -> getUserProfile($mentor -> username) -> hp }}</td>
+                        <td>
+                            <a href="javascript:void(0)" class="btn btn-warning" @click="hapusAtc('{{ $mentor -> username }}')">Hapus</a>
+                        </td>
+                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -24,8 +24,8 @@
                         <div class="form-group">
                             <label>Jenis Kelamin *</label>
                             <select class="form-control" id="txtJk">
-                                <option>Laki Laki</option>
-                                <option>Perempuan</option>
+                                <option value="L">Laki Laki</option>
+                                <option value="P">Perempuan</option>
                             </select>
                         </div>
                         <div class="form-group">

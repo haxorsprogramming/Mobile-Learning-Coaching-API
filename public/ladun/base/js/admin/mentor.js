@@ -1,5 +1,6 @@
 // route 
 var rProsesAddMentor = server + "admin/mentor/add/proses";
+var rProsesHapusMentor = server + "admin/mentor/delete/proses";
 
 // vue object 
 var appMentor = new Vue({
@@ -28,15 +29,35 @@ var appMentor = new Vue({
                     'hp' : document.querySelector("#txtHp").value
                 }
                 axios.post(rProsesAddMentor, ds).then(function(res){
-                    console.log(res.data);
+                    pesanUmumApp('success', 'Sukses', 'Data mentor baru berhasil ditambahkan ...'); 
+                    $("#modalTambahMentor").modal("hide");
+                    setTimeout(function(){
+                        renderPage('admin/mentor', 'Data Mentor');
+                    }, 300);
                 });
             }
+        },
+        hapusAtc : function(username)
+        {
+            confirmQuest('info', 'Konfirmasi', 'Hapus mentor ...?', function (x) {deleteConfirm(username)});
         }
     }
 });
 
 // inisiaslisasi 
 $("#tblDataMentor").dataTable();
+
+function deleteConfirm(username)
+{
+    let ds = {'username':username}
+    axios.post(rProsesHapusMentor, ds).then(function(res){
+        pesanUmumApp('success', 'Sukses', 'Data mentor berhasil dihapus ...'); 
+        $("#modalTambahMentor").modal("hide");
+        setTimeout(function(){
+            renderPage('admin/mentor', 'Data Mentor');
+        }, 300);
+    });
+}
 
 function cekForm(dField)
 {
