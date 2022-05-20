@@ -29,7 +29,8 @@ Route::post('/admin/murid/add/proses', [C_Admin_Murid::class, 'prosestambahmurid
 Route::post('/admin/murid/delete/proses', [C_Admin_Murid::class, 'proseshapusmurid']);
 # Jenis pelajaran 
 Route::get('/admin/jenis-pelajaran', [C_Admin_Jenis_Pelajaran::class, 'jenispelajaran']);
-
+Route::post('/admin/jenis-pelajaran/add/proses', [C_Admin_Jenis_Pelajaran::class, 'prosestambahjenispelajaran']);
+Route::post('/admin/jenis-pelajaran/delete/proses', [C_Admin_Jenis_Pelajaran::class, 'proseshapusjenispelajaran']);
 
 // ----------------- APPLICATION USER ------------------------------------ //
 Route::get('/', [C_Apps_Auth::class, 'landingpage']);
