@@ -1,19 +1,19 @@
 // inisialisasi 
 function botAtc(page)
 {
-    $("#mainApp").hide();
-    $("#divLoading").show();
-    console.log("haloo");
+    loadPage(page);
 }
+
+loadPage('apps-mobile/beranda');
 
 function loadPage(page) {
     $("#mainApp").hide();
     $("#divLoading").show();
     setTimeout(function () {
       $("#divLoading").hide();
-      $("#mainApp").load(page);
+      $("#mainApp").load(server + page);
       $("#mainApp").show();
-    }, 500);
+    }, 700);
 }
 
 function ziTo(tipe, judul, message) {

@@ -41,5 +41,7 @@ Route::post('/admin/jenis-pelajaran/delete/proses', [C_Admin_Jenis_Pelajaran::cl
 // ----------------- APPLICATION USER ------------------------------------ //
 # Auth 
 Route::get('/apps-mobile', [C_Apps_Auth::class, 'loginpage']);
+Route::get('/apps-mobile/logout', [C_Apps_Auth::class, 'logout']);
 # Dashboard 
 Route::get('/apps-mobile/dashboard', [C_Apps_Dashboard::class, 'dashboardpage']);
+Route::get('/apps-mobile/beranda', [C_Apps_Dashboard::class, 'berandapage']);

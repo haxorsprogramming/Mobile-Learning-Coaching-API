@@ -44,9 +44,9 @@
                 <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                     <div class="swiper-slide swiper-slide-active" style="width: 370px;">
                         <ul class="bottom-navigation__icons">
-                            <li><a href="javascript:void(0)" onclick="botAtc('home')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/home.svg"><span>Home</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="botAtc('profile')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/user.svg" alt="" title=""><span>Profil</span></a></li>
-                            <li><a href="../index.php"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/arrow-right-circle.svg"><span>Logout</span></a></li>
+                            <li><a href="javascript:void(0)" onclick="botAtc('apps-mobile/beranda')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/home.svg"><span>Home</span></a></li>
+                            <li><a href="javascript:void(0)" onclick="botAtc('apps-mobile/profile')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/user.svg" alt="" title=""><span>Profil</span></a></li>
+                            <li><a href="{{ url('/apps-mobile/logout') }}"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/arrow-right-circle.svg"><span>Logout</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
     <script src="{{ asset('ladun/mobiokit') }}/js/jquery.custom.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
-
+        const server = "{{ url('') }}/";
     </script>
     <script src="{{ asset('ladun/base') }}/js/app/mainApp.js"></script>
 </body>
