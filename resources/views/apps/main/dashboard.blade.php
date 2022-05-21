@@ -22,7 +22,7 @@
         <!-- HEADER -->
         <header class="header header--page header--fixed">
             <div class="header__inner">
-                <div class="header__logo header__logo--text"><a href="javascript:void(0)">Aplikasi Monitoring Ibadah</a></div>
+                <div class="header__logo header__logo--text"><a href="javascript:void(0)">Aplikasi Mobile Learning</a></div>
                 <div class="header__icon open-panel" data-panel="right"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/white/search.svg" alt="" title="" /></div>
             </div>
         </header>
@@ -44,8 +44,8 @@
                 <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                     <div class="swiper-slide swiper-slide-active" style="width: 370px;">
                         <ul class="bottom-navigation__icons">
-                            <li><a href="javascript:void(0)" onclick="botAtc('apps-mobile/beranda')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/home.svg"><span>Home</span></a></li>
-                            <li><a href="javascript:void(0)" onclick="botAtc('apps-mobile/profile')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/user.svg" alt="" title=""><span>Profil</span></a></li>
+                            <li><a href="javascript:void(0)" onclick="loadPage('apps-mobile/beranda')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/home.svg"><span>Home</span></a></li>
+                            <li><a href="javascript:void(0)" onclick="loadPage('apps-mobile/profile')"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/user.svg" alt="" title=""><span>Profil</span></a></li>
                             <li><a href="{{ url('/apps-mobile/logout') }}"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/arrow-right-circle.svg"><span>Logout</span></a></li>
                         </ul>
                     </div>

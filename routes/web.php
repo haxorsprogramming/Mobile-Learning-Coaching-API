@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\C_API_Auth;
 use App\Http\Controllers\C_Apps_Auth;
 use App\Http\Controllers\C_Apps_Dashboard;
+use App\Http\Controllers\C_Apps_Jadwal_pelajaran;
 use App\Http\Controllers\C_Admin_Auth;
 use App\Http\Controllers\C_Admin_Dashboard;
 use App\Http\Controllers\C_Admin_Mentor;
@@ -45,3 +46,5 @@ Route::get('/apps-mobile/logout', [C_Apps_Auth::class, 'logout']);
 # Dashboard 
 Route::get('/apps-mobile/dashboard', [C_Apps_Dashboard::class, 'dashboardpage']);
 Route::get('/apps-mobile/beranda', [C_Apps_Dashboard::class, 'berandapage']);
+# Buat pelajaran 
+Route::get('/apps-mobile/pelajaran/buat', [C_Apps_Jadwal_pelajaran::class, 'buatjadwalpelajaran']);

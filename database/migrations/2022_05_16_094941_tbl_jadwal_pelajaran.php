@@ -13,7 +13,16 @@ class TblJadwalPelajaran extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_jadwal_pelajaran', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('kd_jadwal', 150);
+            $table -> char('kd_pelajaran', 150);
+            $table -> text('keterangan') -> nullable();
+            $table -> char('username_mentor', 200);
+            $table -> dateTime('waktu_mulai');
+            $table -> dateTime('waktu_selesai');
+            $table -> timestamps();
+        });
     }
 
     /**
