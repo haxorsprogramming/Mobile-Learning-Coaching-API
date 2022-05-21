@@ -30,7 +30,7 @@
 						<div id="divFormLogin">
 							<div class="login-form__row">
 								<label class="login-form__label">Username</label>
-								<input type="text" id="txtUsername" maxlength="10" class="login-form__input required" />
+								<input type="text" id="txtUsername" maxlength="50" class="login-form__input required" />
 							</div>
 							<div class="login-form__row">
 								<label class="login-form__label">Password</label>
@@ -47,7 +47,7 @@
 							<p>Belum punya akun?</p>
 							<a href="javascript:void(0)" class="button button--secondary button--full"@click="daftarAtc">Daftar</a>
 						</div> -->
-						<div style="text-align: center;color: aliceblue;margin-top:20px;">
+						<div style="text-align: center;color: aliceblue;margin-top:20px;color:black;">
 							<span>Develop By : Wahidatunnisa</span><br/>
 							Program Studi Teknik Informatika, Fakultas Teknik<br/>
 							Universitas Malikussaleh Lhokseumawe

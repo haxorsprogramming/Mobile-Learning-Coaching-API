@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\C_API_Auth;
 use App\Http\Controllers\C_Apps_Auth;
+use App\Http\Controllers\C_Apps_Dashboard;
 use App\Http\Controllers\C_Admin_Auth;
 use App\Http\Controllers\C_Admin_Dashboard;
 use App\Http\Controllers\C_Admin_Mentor;
@@ -38,4 +39,7 @@ Route::post('/admin/jenis-pelajaran/add/proses', [C_Admin_Jenis_Pelajaran::class
 Route::post('/admin/jenis-pelajaran/delete/proses', [C_Admin_Jenis_Pelajaran::class, 'proseshapusjenispelajaran']);
 
 // ----------------- APPLICATION USER ------------------------------------ //
+# Auth 
 Route::get('/apps-mobile', [C_Apps_Auth::class, 'loginpage']);
+# Dashboard 
+Route::get('/apps-mobile/dashboard', [C_Apps_Dashboard::class, 'dashboardpage']);
