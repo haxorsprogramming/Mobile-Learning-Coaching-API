@@ -1,6 +1,7 @@
 // inisialisasi 
 
-loadPage('apps-mobile/beranda');
+// loadPage('apps-mobile/beranda');
+$("#mainApp").load(server + 'apps-mobile/beranda');
 
 function loadPage(page) {
   $("#mainApp").hide();

@@ -24,9 +24,8 @@ class C_Apps_Dashboard extends Controller
     public function berandapage()
     {
         $userData = $this -> helperCtr -> getUserData();
-        $username = $userData -> username;
-        $dataUser = M_User_Profile::where('username', $username) -> first();
-        // echo $username;
+        $dataUser = M_User_Profile::where('username', $userData -> username) -> first();
+        // // echo $username;
         $dr = ['dataUser' => $dataUser];
         return view('apps.main.beranda', $dr);
     }
