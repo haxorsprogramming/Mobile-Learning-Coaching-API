@@ -1,3 +1,5 @@
+// route 
+
 // vue object
 var app = new Vue({
     el: "#app",
@@ -7,7 +9,13 @@ var app = new Vue({
     methods: {
         loginProsesAtc: function () 
         {
+            let username = document.querySelector("#txtUsername").value;
+            let password = document.querySelector("#txtPassword").value;
+            if(username.length < 1 || password.length < 1){
+                ziTo('warning', 'isi Field !!!', 'Harap isi seluruh field !!!');
+            }else{
 
+            }
         },
     },
 });

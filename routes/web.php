@@ -13,12 +13,14 @@ use App\Http\Controllers\C_Admin_Jenis_Pelajaran;
 // ----------------------- API ------------------------------------------- // 
 Route::post('/auth/login/proses', [C_API_Auth::class, 'loginproses']);
 
+
 // ----------------------- ROOT ------------------------------------------ // 
 Route::get('/', function () { return 'APLIKASI MOBILE LEARNING TAHSIN PADA HAFALAN AL-QUR’AN MENGGUNAKAN METODE COACHING BERBASIS ANDROID'; });
 
 // --------------------- ADMIN ------------------------------------------- //
 # Auth
 Route::get('/admin/login', [C_Admin_Auth::class, 'loginpage']);
+Route::get('/admin/logout', [C_Admin_Auth::class, 'logout']);
 # Dashboard
 Route::get('/admin/dashboard', [C_Admin_Dashboard::class, 'dashboardpage']);
 Route::get('/admin/dashboard/beranda', [C_Admin_Dashboard::class, 'berandapage']);

@@ -30,4 +30,5 @@ class C_API_Auth extends Controller
         $dr = ['status' => $status, 'role' => $role];
         return \Response::json($dr);
     }
+    
 }
