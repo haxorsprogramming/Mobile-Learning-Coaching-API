@@ -19,8 +19,8 @@ class TblJadwalPelajaran extends Migration
             $table -> char('kd_pelajaran', 150);
             $table -> text('keterangan') -> nullable();
             $table -> char('username_mentor', 200);
-            $table -> dateTime('waktu_mulai');
-            $table -> dateTime('waktu_selesai');
+            $table -> dateTime('waktu_mulai') -> nullable();
+            $table -> dateTime('waktu_selesai') -> nullable();
             $table -> timestamps();
         });
     }
@@ -32,6 +32,6 @@ class TblJadwalPelajaran extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_jadwal_pelajaran');
     }
 }

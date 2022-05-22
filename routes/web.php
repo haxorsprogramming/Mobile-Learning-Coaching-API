@@ -48,3 +48,5 @@ Route::get('/apps-mobile/dashboard', [C_Apps_Dashboard::class, 'dashboardpage'])
 Route::get('/apps-mobile/beranda', [C_Apps_Dashboard::class, 'berandapage']);
 # Buat pelajaran 
 Route::get('/apps-mobile/pelajaran/buat', [C_Apps_Jadwal_pelajaran::class, 'buatjadwalpelajaran']);
+Route::post('/apps-mobile/pelajaran/buat/proses', [C_Apps_Jadwal_pelajaran::class, 'prosesbuatpelajaran']);
+Route::get('/apps-mobile/pelajaran/list', [C_Apps_Jadwal_pelajaran::class, 'listjadwalpelajaran']);

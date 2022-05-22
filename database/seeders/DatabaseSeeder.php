@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this -> call([S_User::class]);
+        $this -> call([S_User::class, S_Jenis_Pelajaran::class]);
     }
 }

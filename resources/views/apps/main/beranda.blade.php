@@ -17,7 +17,7 @@
         <h4 class="card__title">Buat Pelajaran</h4>
         <p class="card__text">Buat kelas pelajaran untuk digunakan oleh murid</p>
     </div>
-    <div class="card card--style-icon card--style-round-corners">
+    <div class="card card--style-icon card--style-round-corners" onclick="loadPage('apps-mobile/pelajaran/list')">
         <div class="card__icon"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/listing.svg" alt="" title="" />
         </div>
         <h4 class="card__title">Daftar Pelajaran</h4>

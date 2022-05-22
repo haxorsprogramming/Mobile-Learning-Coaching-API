@@ -36,14 +36,31 @@
 
 <script>
 
+var rProsesAddPelajaran = server + "apps-mobile/pelajaran/buat/proses";
+
 function prosesBuatPelajaranAtc()
 {
     let jenis = document.querySelector("#txtJenisPelajaran").value;
     let judul = document.querySelector("#txtJudulPelajaran").value;
     let keterangan = document.querySelector("#txtKeterangan").value;
     let tanggal = document.querySelector("#txtTanggal").value;
-    let ds = {'jenis':jenis, 'judul':judul, 'keterangan':keterangan, 'tanggal':tanggal}
-    console.log(ds);
+    if(judul.length < 1 || keterangan.length < 1 || tanggal.length < 1){
+        ziTo('warning', 'Isi field !!!', 'Harap lengkapi seluruh field !!!');
+    }else{
+        let ds = {'jenis':jenis, 'judul':judul, 'keterangan':keterangan, 'tanggal':tanggal}
+        let confirmAdd = window.confirm("Tambah jadwal pelajaran ...?");
+        if(confirmAdd === true){
+            tambahKonfirm(ds);
+        }
+        // confirmQuest('info', 'Konfirmasi', 'Tambah jadwal pelajaran ...?', function (x) {tambahKonfirm(ds)});
+    }
+}
+
+function tambahKonfirm(ds)
+{
+    axios.post(rProsesAddPelajaran, ds).then(function(res){
+        ziTo('success', 'Sukses ...', 'Berhasil menambahkan jadwal pelajaran ...');
+    });
 }
 
 </script>
