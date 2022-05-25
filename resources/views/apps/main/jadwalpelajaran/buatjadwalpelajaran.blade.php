@@ -60,6 +60,9 @@ function tambahKonfirm(ds)
 {
     axios.post(rProsesAddPelajaran, ds).then(function(res){
         ziTo('success', 'Sukses ...', 'Berhasil menambahkan jadwal pelajaran ...');
+        setTimeout(function(){
+            loadPage('apps-mobile/pelajaran/list');
+        }, 300);
     });
 }
 

@@ -40,7 +40,10 @@ class C_Apps_Jadwal_pelajaran extends Controller
     }
     public function listjadwalpelajaran()
     {
-
+        $userData = $this -> helperCtr -> getUserData();
+        $dataJadwal = M_Jadwal_Pelajaran::where('username_mentor', $userData -> username) -> get();
+        $dr = ['dataJadwal' => $dataJadwal];
+        return view('apps.main.jadwalpelajaran.listjadwalpelajaran', $dr);
     }
-    
+
 }
