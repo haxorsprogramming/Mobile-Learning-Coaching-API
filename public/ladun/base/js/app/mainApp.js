@@ -1,9 +1,7 @@
 // inisialisasi 
-
-// loadPage('apps-mobile/beranda');
-// $("#mainApp").load(server + 'apps-mobile/beranda');
-
-loadPage('apps-mobile/beranda');
+setTimeout(function(){
+  loadPage('apps-mobile/beranda');  
+}, 700);
 
 function loadPage(page) {
   $("#mainApp").hide();

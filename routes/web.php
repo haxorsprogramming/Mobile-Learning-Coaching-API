@@ -7,6 +7,7 @@ use App\Http\Controllers\C_Apps_Auth;
 use App\Http\Controllers\C_Apps_Dashboard;
 use App\Http\Controllers\C_Apps_Jadwal_pelajaran;
 use App\Http\Controllers\C_Apps_Profile;
+use App\Http\Controllers\C_Apps_Enroll;
 use App\Http\Controllers\C_Admin_Auth;
 use App\Http\Controllers\C_Admin_Dashboard;
 use App\Http\Controllers\C_Admin_Mentor;
@@ -44,12 +45,14 @@ Route::post('/admin/jenis-pelajaran/delete/proses', [C_Admin_Jenis_Pelajaran::cl
 # Auth 
 Route::get('/apps-mobile', [C_Apps_Auth::class, 'loginpage']);
 Route::get('/apps-mobile/logout', [C_Apps_Auth::class, 'logout']);
-# Dashboard 
+# Dashboard -> mentor & murid
 Route::get('/apps-mobile/dashboard', [C_Apps_Dashboard::class, 'dashboardpage']);
 Route::get('/apps-mobile/beranda', [C_Apps_Dashboard::class, 'berandapage']);
-# Buat pelajaran 
+# Buat pelajaran -> mentor
 Route::get('/apps-mobile/pelajaran/buat', [C_Apps_Jadwal_pelajaran::class, 'buatjadwalpelajaran']);
 Route::post('/apps-mobile/pelajaran/buat/proses', [C_Apps_Jadwal_pelajaran::class, 'prosesbuatpelajaran']);
 Route::get('/apps-mobile/pelajaran/list', [C_Apps_Jadwal_pelajaran::class, 'listjadwalpelajaran']);
-# Profile
+# Profile -> mentor & murid
 Route::get('/apps-mobile/profile', [C_Apps_Profile::class, 'profile']);
+# Enroll -> murid
+Route::get('/apps-mobile/pelajaran/enroll', [C_Apps_Enroll::class, 'enroll']); 

@@ -9,7 +9,10 @@
 </div>
 
 <p class="welcome"></p>
-<h3>Fitur aplikasi (Mentor)</h3>
+<h3>Fitur aplikasi ({{ ucfirst($role) }})</h3>
+
+@if($role == 'mentor')
+<!-- Menu untuk mentor  -->
 <div class="cards cards--12">
     <div class="card card--style-icon card--style-round-corners" onclick="loadPage('apps-mobile/pelajaran/buat')">
         <div class="card__icon"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/form.svg" alt="" title="" />
@@ -24,6 +27,25 @@
         <p class="card__text">Daftar kelas untuk murid</p>
     </div>
 </div>
+@else
+<!-- Menu untuk murid  -->
+<div class="cards cards--12">
+    <div class="card card--style-icon card--style-round-corners" onclick="loadPage('apps-mobile/pelajaran/enroll')">
+        <div class="card__icon"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/form.svg" alt="" title="" />
+        </div>
+        <h4 class="card__title">Enroll Pelajaran</h4>
+        <p class="card__text">Buat kelas pelajaran untuk digunakan oleh murid</p>
+    </div>
+    <div class="card card--style-icon card--style-round-corners" onclick="loadPage('apps-mobile/pelajaran/list')">
+        <div class="card__icon"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/blue/listing.svg" alt="" title="" />
+        </div>
+        <h4 class="card__title">List Pelajaran</h4>
+        <p class="card__text">Daftar kelas untuk murid</p>
+    </div>
+</div>
+@endif
+
+
 
 <script>
     
