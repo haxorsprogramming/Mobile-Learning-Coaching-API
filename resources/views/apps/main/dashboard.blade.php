@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
-    <title>Aplikasi Mentoring Ibadah</title>
+    <title>Aplikasi Tahsin</title>
     <link rel="stylesheet" href="{{ asset('ladun/mobiokit') }}/vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/izitoast/css/iziToast.min.css">
     <link rel="stylesheet" href="{{ asset('ladun/mobiokit') }}/css/style.css">
