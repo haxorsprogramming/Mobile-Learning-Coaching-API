@@ -19,4 +19,13 @@ class C_Apps_Enroll extends Controller
         $dr = ['dataPelajaran' => $dataPelajaran];
         return view('apps.main.enroll.pilihpelajaran', $dr);
     }
+    public function prosesenrollpelajaran(Request $request)
+    {
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+    public function listenrollpelajaran()
+    {
+        
+    }
 }

@@ -57,3 +57,5 @@ Route::get('/apps-mobile/profile', [C_Apps_Profile::class, 'profile']);
 # Enroll -> murid
 Route::get('/apps-mobile/pelajaran/enroll', [C_Apps_Enroll::class, 'enroll']); 
 Route::get('/apps-mobile/pelajaran/enroll/pelajaran/{kdJadwal}', [C_Apps_Enroll::class, 'pilihPelajaran']);
+Route::post('/apps-mobile/pelajaran/enroll/proses', [C_Apps_Enroll::class, 'prosesenrollpelajaran']);
+Route::get('/apps-mobile/pelajaran/enroll/list', [C_Apps_Enroll::class, 'listenrollpelajaran']);

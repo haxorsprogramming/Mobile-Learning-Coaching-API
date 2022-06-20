@@ -27,16 +27,25 @@
 </div>
 
 <script>
-var appEnroll = new Vue({
-    el : '#divEnroll',
-    data : {
-        kdJadwal : '{{ $dataPelajaran -> kd_jadwal }}'
-    },
-    methods : {
-        prosesEnrollAtc : function()
-        {
-            console.log(appEnroll.kdJadwal);
+    var rToProsesEnroll = server + "apps-mobile/pelajaran/enroll/proses";
+    var appEnroll = new Vue({
+        el : '#divEnroll',
+        data : {
+            kdJadwal : '{{ $dataPelajaran -> kd_jadwal }}'
+        },
+        methods : {
+            prosesEnrollAtc : function()
+            {
+                let confirm = window.confirm("Enroll/Daftar ke jadwal pelajaran ini? ...");
+                if(confirm === true){
+                    axios.post(rToProsesEnroll).then(function(res){
+                        ziTo('success', 'Sukses ...', 'Berhasil enroll ke jadwal pelajaran ...');
+                        setTimeout(function(){
+                            loadPage('apps-mobile/pelajaran/enroll');
+                        }, 500);
+                    });
+                }
+            }
         }
-    }
-});
+    });
 </script>
