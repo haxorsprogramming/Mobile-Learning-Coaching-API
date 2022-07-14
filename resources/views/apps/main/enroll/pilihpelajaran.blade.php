@@ -37,8 +37,10 @@
             prosesEnrollAtc : function()
             {
                 let confirm = window.confirm("Enroll/Daftar ke jadwal pelajaran ini? ...");
+                
                 if(confirm === true){
-                    axios.post(rToProsesEnroll).then(function(res){
+                    let dr = {'kdJadwal':appEnroll.kdJadwal}
+                    axios.post(rToProsesEnroll, dr).then(function(res){
                         ziTo('success', 'Sukses ...', 'Berhasil enroll ke jadwal pelajaran ...');
                         setTimeout(function(){
                             loadPage('apps-mobile/pelajaran/enroll');

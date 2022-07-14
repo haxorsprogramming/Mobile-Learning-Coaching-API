@@ -1,7 +1,7 @@
 <div id="divListPelajaran">
     <h2 class="page__title">Enroll Pelajaran</h2>
     <p class="welcome">
-        List daftar pelajaran anda.
+        List daftar pelajaran yang tersedia.
     </p>
     <div>
         @foreach($dataPelajaran as $pelajaran)
