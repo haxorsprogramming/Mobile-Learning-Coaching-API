@@ -44,7 +44,9 @@ class C_Apps_Enroll extends Controller
     }
     public function listenrollpelajaran()
     {
-        $dr = ['status' => 200];
+        $userData = $this -> helperCtr -> getUserData();
+        $listEnrollPelajaran = M_Enrollment::where('username_murid', $userData -> username) -> where('waktu_selesai', NULL) -> get();
+        $dr = ['status' => 200, 'dataPelajaran' => $listEnrollPelajaran];
         return view('apps.main.enroll.listpelajaran', $dr);
     }
 }
