@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\M_Jadwal_Pelajaran;
+use App\Models\M_Jenis_Pelajaran;
 use App\Models\M_User_Profile;
 
 class M_Enrollment extends Model
@@ -20,7 +21,6 @@ class M_Enrollment extends Model
         'waktu_selesai'
     ];
 
-
     public function pelajaranData($kdJadwalPelajaran)
     {
         return M_Jadwal_Pelajaran::where('kd_jadwal', $kdJadwalPelajaran) -> first();
@@ -30,6 +30,12 @@ class M_Enrollment extends Model
     {
         $dataPelajaran = M_Jadwal_Pelajaran::where('kd_jadwal', $kdJadwalPelajaran) -> first();
         return M_User_Profile::where('username', $dataPelajaran -> username_mentor) -> first();
+    }
+
+    public function dataJenisPelajaran($kdJadwalPelajaran)
+    {
+        $dataJadwalPelajaran = M_Jadwal_Pelajaran::where('kd_jadwal', $kdJadwalPelajaran) -> first();
+        return M_Jenis_Pelajaran::where('kd_pelajaran', $dataJadwalPelajaran -> kd_pelajaran) -> first();
     }
 
 }

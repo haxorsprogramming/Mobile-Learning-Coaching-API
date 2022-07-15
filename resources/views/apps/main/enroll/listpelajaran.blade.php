@@ -13,9 +13,10 @@
             <div class="card__icon"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/gradient-orange/news.svg" alt="" title=""></div>
             <div class="card__details">
                 <h4 class="card__title"><span>({{ $dp -> pelajaranData($dp -> kd_jadwal_pelajaran) -> keterangan }})</span></h4>
-                <p class="card__text"></p>
+                <p class="card__text"><b>{{ $dp -> dataJenisPelajaran($dp -> kd_jadwal_pelajaran) -> nama }}</b></p>
                 <span>Mentor <strong>{{ $dp -> mentorData($dp -> kd_jadwal_pelajaran) -> nama }}</strong></span><br/>
-                <small>Waktu daftar : {{ $dp -> waktu_daftar }}</small>
+                <small>Waktu daftar : {{ $dp -> waktu_daftar }}</small><br/>
+                <small>Waktu selesai : {{ $dp -> waktu_selesai }}</small>
             </div>
             <div class="card__more"><a href="javascript:void(0)"><img src="{{ asset('ladun/mobiokit') }}/assets/images/icons/black/more.svg" alt="" title=""></a></div>
         </div>
